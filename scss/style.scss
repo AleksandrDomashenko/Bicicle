@@ -18,6 +18,7 @@
   min-width: 100vw;
 }
 
+// HEADER
 .header {
   margin: 35px auto 0 auto;
   min-height: 100vh;
@@ -88,6 +89,7 @@
   }
 }
 
+// FIRST FRAME
 .first-frame {
   text-align: center;
   &__column {
@@ -131,6 +133,7 @@
   }
 }
 
+// SECOND FRAME
 .second-frame {
   &__row {
     @include flex(flex, none, none, none);
@@ -205,6 +208,7 @@
   }
 }
 
+// THREETH FRAME
 .threeth-frame {
   &__row {
     @include flex(flex, none, none, none);
@@ -267,6 +271,7 @@
   }
 }
 
+// FOURTH FRAME
 .fourth-frame {
   &__row {
     @include flex(flex, none, none, none);
@@ -334,6 +339,7 @@
   }
 }
 
+// FIVETH FRAME
 .fiveth-frame {
   &__column {
     @include flex(flex, column, center, center);
@@ -394,6 +400,7 @@
   }
 }
 
+// SIXTH FRAME
 .sixth-frame {
   &__row {
     @include flex(flex, row, none, center);
@@ -441,6 +448,7 @@
   }
 }
 
+// SEVENTH FRAME
 .seventh-frame {
   background-color: #282f35;
   @include font(none, 1.2, 0.2em, #fff, 700);
@@ -469,6 +477,8 @@
     }
   }
 }
+
+// EIGHT FRAME
 .eighth-frame {
   &__column {
     @include flex(flex, column, center, center);
@@ -569,6 +579,7 @@
   }
 }
 
+// FOOTER
 .footer {
   background-color: #f7f7f7;
   &__row {
