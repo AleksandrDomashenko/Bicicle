@@ -605,12 +605,12 @@
 
   &__column {
     &:nth-child(2) {
-      img {
+      a {
         &:not(:last-child) {
           margin-right: 15px;
         }
         &:last-child {
-          margin-right: 80px;
+          margin-right: 90px;
         }
       }
     }
