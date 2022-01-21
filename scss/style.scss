@@ -1,5 +1,5 @@
 //подключение шрифтов
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 //нулевой стиль
 @import 'nulestyle.scss';
 //файл с миксинами
@@ -328,6 +328,187 @@
 
   &__line {
     margin-bottom: 62px;
+  }
+}
+
+.fiveth-frame {
+  &__column {
+    @include flex(flex, column, center, center);
+    img {
+      margin-top: 124px;
+      margin-bottom: 37px;
+      @media (min-width: 2000px) {
+        width: 64px;
+        height: 54px;
+        margin-bottom: 43px;
+      }
+      @media (min-width: 2500px) {
+        width: 96px;
+        height: 81px;
+        margin-bottom: 49px;
+      }
+      @media (min-width: 3000px) {
+        width: 128px;
+        height: 108px;
+        margin-bottom: 55px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 27px;
+    @include font(18px, 1.2, 0.1em, #353738, 700);
+    span {
+      @include font(none, none, none, #848789, 300);
+    }
+    padding: 0 15px;
+    @media (min-width: 2000px) {
+      margin-bottom: 33px;
+    }
+    @media (min-width: 2500px) {
+      margin-bottom: 39px;
+    }
+    @media (min-width: 3000px) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__subtitle {
+    @include font(24px, 34px, none, #848789, none);
+    font-style: italic;
+    margin-bottom: 183px;
+    padding: 0 15px;
+    text-align: center;
+    @media (min-width: 2000px) {
+      @include font(30px, 40px, none, #848789, none);
+    }
+    @media (min-width: 2500px) {
+      @include font(36px, 46px, none, none, none);
+    }
+    @media (min-width: 3000px) {
+      @include font(42px, 52px, none, none, none);
+    }
+  }
+}
+
+.sixth-frame {
+  &__row {
+    @include flex(flex, row, none, center);
+  }
+
+  &__column {
+    flex: 1 1 33.333%;
+    &:nth-child(2) {
+      display: flex;
+      img {
+        &:first-child {
+          width: 99.25%;
+          height: 100%;
+        }
+        &:last-child {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &__rowb {
+    &:first-child,
+    &:last-child {
+      display: flex;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__rowt {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &:first-child {
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+        transition: all 1s ease;
+      }
+    }
+  }
+}
+
+.seventh-frame {
+  background-color: #282f35;
+  @include font(none, 1.2, 0.2em, #fff, 700);
+
+  &__link {
+    @include flex(flex, column, center, center);
+    a {
+      margin-top: 75px;
+      margin-bottom: 75px;
+      padding: 21px 57px;
+      display: inline-block;
+      border: 1px solid #fff;
+
+      color: #fff;
+      &:hover {
+        box-shadow: -10px 5px 10px #fff;
+        transition: all 0.2s ease;
+      }
+      &:active {
+        position: relative;
+        top: 5px;
+        left: -10px;
+        box-shadow: none;
+        transition: none;
+      }
+    }
+  }
+}
+.eighth-frame {
+  &__column {
+    @include flex(flex, column, center, center);
+    img {
+      margin-top: 109px;
+      margin-bottom: 39px;
+      @media (min-width: 2000px) {
+        width: 141px;
+        height: 128px;
+      }
+      @media (min-width: 2500px) {
+        width: 188px;
+        height: 170px;
+      }
+      @media (min-width: 3000px) {
+        width: 250px;
+        height: 227px;
+      }
+    }
+  }
+
+  &__title {
+    @include font(24px, 34px, none, #848789, none);
+    @media (min-width: 2000px) {
+      @include font(30px, 40px, none, none, none);
+    }
+    @media (min-width: 2500px) {
+      @include font(36px, 46px, none, none, none);
+    }
+    @media (min-width: 3000px) {
+      @include font(42px, 52px, none, none, none);
+    }
+    font-style: italic;
+    margin-bottom: 35px;
+  }
+  form {
+    margin-bottom: 111px;
+    input {
+      @include font(16px, 16px, 2px, none, 700);
+      width: 400px;
+      border: 1px solid #d3d7d9;
+      padding: 28px 28px 24px 28px;
+    }
   }
 }
 
