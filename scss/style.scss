@@ -70,6 +70,9 @@
         padding-right: 15px;
       }
       color: #4d4959;
+      &:hover {
+        text-shadow: 0 0 20px #64c29e;
+      }
     }
   }
 
@@ -504,10 +507,21 @@
   form {
     margin-bottom: 111px;
     input {
-      @include font(16px, 16px, 2px, none, 700);
+      @include font(16px, none, 2px, none, 700);
       width: 400px;
       border: 1px solid #d3d7d9;
       padding: 28px 28px 24px 28px;
+    }
+    button {
+      @include font(24px, 24px, none, #fff, 300);
+      background-color: #64c29e;
+      padding: 26px 45px;
+      margin-left: 8px;
+      &:hover {
+        color: #64c29e;
+        background-color: #282f35;
+        @include font(none, none, none, none, 700);
+      }
     }
   }
 }
@@ -529,7 +543,6 @@
     height: 4px;
   }
 }
-
 .title {
   @media (min-width: 2000px) {
     @include font(24px, 1.2, 0.4em, none, none);
@@ -553,5 +566,46 @@
   @media (min-width: 3000px) {
     @include font(34px, 47px, none, none, none);
     max-width: 790px;
+  }
+}
+
+.footer {
+  background-color: #f7f7f7;
+  &__row {
+    padding-top: 99px;
+    padding-bottom: 103px;
+    @include flex(flex, none, space-between, center);
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__column {
+    &:nth-child(2) {
+      img {
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+        &:last-child {
+          margin-right: 90px;
+        }
+      }
+    }
+    &:last-child {
+      @include flex(flex, none, none, center);
+      img {
+        margin-left: 9px;
+      }
+    }
+  }
+
+  &__name {
+    @include font(16px, 17px, none, #848789, 700);
+  }
+
+  &__adress,
+  &__county,
+  &__craft {
+    @include font(13.9px, 17px, none, #848789, none);
+    font-style: italic;
   }
 }
