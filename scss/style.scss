@@ -72,7 +72,7 @@
       }
       color: #4d4959;
       &:hover {
-        text-shadow: 0 0 20px #64c29e;
+        text-shadow: 0 0 8px #64c29e;
       }
     }
   }
@@ -85,6 +85,9 @@
     img {
       width: 100vw;
       height: 100vh;
+      @media (max-width: 1200px) {
+        height: 100%;
+      }
     }
   }
 }
@@ -458,6 +461,15 @@
 .seventh-frame {
   background-color: #282f35;
   @include font(none, 1.2, 0.2em, #fff, 700);
+  @media (min-width: 2000px) {
+    @include font(20px, none, none, none, none);
+  }
+  @media (min-width: 2500px) {
+    @include font(26px, none, none, none, none);
+  }
+  @media (min-width: 3000px) {
+    @include font(32px, none, none, none, none);
+  }
 
   &__link {
     @include flex(flex, column, center, center);
@@ -520,15 +532,36 @@
     margin-bottom: 35px;
   }
   form {
+    @include flex(flex, row, center, center);
     margin-bottom: 111px;
+    width: 33.375%;
     input {
       @include font(16px, none, 2px, none, 700);
-      width: 400px;
+      width: 79%;
+      min-width: 400px;
       border: 1px solid #d3d7d9;
       padding: 28px 28px 24px 28px;
+      @media (min-width: 2000px) {
+        @include font(22px, none, none, none, none);
+      }
+      @media (min-width: 2500px) {
+        @include font(28px, none, none, none, none);
+      }
+      @media (min-width: 3000px) {
+        @include font(34px, none, none, none, none);
+      }
     }
     button {
       @include font(24px, 24px, none, #fff, 300);
+      @media (min-width: 2000px) {
+        @include font(30px, 30px, none, none, none);
+      }
+      @media (min-width: 2500px) {
+        @include font(30px, 30px, none, none, none);
+      }
+      @media (min-width: 3000px) {
+        @include font(30px, 30px, none, none, none);
+      }
       background-color: #64c29e;
       padding: 26px 45px;
       margin-left: 8px;

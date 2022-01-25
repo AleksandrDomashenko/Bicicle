@@ -233,7 +233,7 @@ h6 {
 }
 
 .header__link a:hover {
-  text-shadow: 0 0 20px #64c29e;
+  text-shadow: 0 0 8px #64c29e;
 }
 
 .header__background {
@@ -246,6 +246,12 @@ h6 {
 .header__background img {
   width: 100vw;
   height: 100vh;
+}
+
+@media (max-width: 1200px) {
+  .header__background img {
+    height: 100%;
+  }
 }
 
 .first-frame {
@@ -898,6 +904,36 @@ h6 {
   font-weight: 700;
 }
 
+@media (min-width: 2000px) {
+  .seventh-frame {
+    font-size: 20px;
+    line-height: none;
+    letter-spacing: none;
+    color: none;
+    font-weight: none;
+  }
+}
+
+@media (min-width: 2500px) {
+  .seventh-frame {
+    font-size: 26px;
+    line-height: none;
+    letter-spacing: none;
+    color: none;
+    font-weight: none;
+  }
+}
+
+@media (min-width: 3000px) {
+  .seventh-frame {
+    font-size: 32px;
+    line-height: none;
+    letter-spacing: none;
+    color: none;
+    font-weight: none;
+  }
+}
+
 .seventh-frame__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1023,7 +1059,21 @@ h6 {
 }
 
 .eighth-frame form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 111px;
+  width: 33.375%;
 }
 
 .eighth-frame form input {
@@ -1032,9 +1082,40 @@ h6 {
   letter-spacing: 2px;
   color: none;
   font-weight: 700;
-  width: 400px;
+  width: 79%;
+  min-width: 400px;
   border: 1px solid #d3d7d9;
   padding: 28px 28px 24px 28px;
+}
+
+@media (min-width: 2000px) {
+  .eighth-frame form input {
+    font-size: 22px;
+    line-height: none;
+    letter-spacing: none;
+    color: none;
+    font-weight: none;
+  }
+}
+
+@media (min-width: 2500px) {
+  .eighth-frame form input {
+    font-size: 28px;
+    line-height: none;
+    letter-spacing: none;
+    color: none;
+    font-weight: none;
+  }
+}
+
+@media (min-width: 3000px) {
+  .eighth-frame form input {
+    font-size: 34px;
+    line-height: none;
+    letter-spacing: none;
+    color: none;
+    font-weight: none;
+  }
 }
 
 .eighth-frame form button {
@@ -1046,6 +1127,36 @@ h6 {
   background-color: #64c29e;
   padding: 26px 45px;
   margin-left: 8px;
+}
+
+@media (min-width: 2000px) {
+  .eighth-frame form button {
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: none;
+    color: none;
+    font-weight: none;
+  }
+}
+
+@media (min-width: 2500px) {
+  .eighth-frame form button {
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: none;
+    color: none;
+    font-weight: none;
+  }
+}
+
+@media (min-width: 3000px) {
+  .eighth-frame form button {
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: none;
+    color: none;
+    font-weight: none;
+  }
 }
 
 .eighth-frame form button:hover {
