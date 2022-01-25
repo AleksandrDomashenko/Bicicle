@@ -21,7 +21,7 @@
 // HEADER
 .header {
   margin: 35px auto 0 auto;
-  min-height: 100vh;
+  // height: 100vh;
   &__list {
     @include flex(flex, none, space-between, center);
     max-width: 620px;
@@ -47,6 +47,17 @@
       @media (min-width: 3000px) {
         width: 250px;
         height: 227px;
+      }
+    }
+    @media (max-width: 767px) {
+      li {
+        display: none;
+      }
+      img {
+        position: absolute;
+        transform: translateX(-90%);
+        left: 90%;
+        margin-top: 30px;
       }
     }
   }
@@ -78,15 +89,110 @@
   }
 
   &__background {
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: -120px;
     left: 0;
     z-index: -1;
     img {
       width: 100vw;
       height: 100vh;
-      @media (max-width: 1200px) {
-        height: 100%;
+      object-fit: cover;
+      object-position: center;
+      @media (max-width: 1000px) {
+        height: 70vh;
+      }
+      @media (max-width: 767px) {
+        height: 60vh;
+        object-position: right;
+        opacity: 0.4;
+      }
+    }
+  }
+  .burger {
+    display: none;
+    padding-left: 3px;
+    padding-top: 3px;
+    @media (max-width: 767px) {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-top: 30px;
+      margin-left: 10px;
+      z-index: 150;
+    }
+
+    // стили для линий
+    &__first-line,
+    &__second-line,
+    &__threeth-line {
+      width: 40%;
+      height: 1px;
+      border: 0.5px solid rgb(66, 66, 66);
+      background-color: rgb(66, 66, 66);
+      transition: 0.5s;
+      &:not(:last-child) {
+        margin-bottom: 2px;
+      }
+    }
+
+    &:hover {
+      // стили первой линии при наведении
+      .burger__first-line {
+        position: relative;
+        top: 2.9px;
+        transform: rotate(45deg);
+        transition: 0.5s;
+        z-index: 5;
+      }
+      // стили третьей линии при наведении
+      .burger__second-line {
+        transform: rotate(45deg);
+        transition: 0.5s;
+        z-index: 10;
+      }
+      // стили третьей линии при наведении
+      .burger__threeth-line {
+        position: relative;
+        top: -2.9px;
+        transform: rotate(-45deg);
+        transition: 0.5s;
+        z-index: 15;
+      }
+      // событие которе показывает меню при наведении/нажатии на бургер меню
+      .burger__menu {
+        visibility: visible;
+        left: -3px;
+        transition: 0.5s;
+        position: relative;
+        top: -12px;
+      }
+    }
+
+    &__menu {
+      visibility: hidden;
+      position: relative;
+      left: -150px;
+      transition: 0.5s ease-in-out;
+    }
+
+    &__list {
+      background-color: rgb(202, 202, 202);
+    }
+
+    &__link {
+      @include font(5px, 5px, 0.1em, black, 400);
+      padding-left: 15px;
+      padding-top: 3px;
+      padding-right: 3px;
+      &:last-child {
+        padding-bottom: 3px;
+      }
+      a {
+        color: black;
+        &:hover {
+          color: darkslateblue;
+        }
       }
     }
   }
@@ -98,6 +204,12 @@
     img {
       margin-top: 117px;
       margin-bottom: 34px;
+      @media (max-width: 1000px) {
+        margin-top: 0px;
+      }
+      @media (max-width: 767px) {
+        margin-top: -50px;
+      }
       @media (min-width: 2000px) {
         width: 104px;
         height: 86px;
