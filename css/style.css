@@ -264,18 +264,13 @@ h6 {
      object-position: center;
 }
 
-@media (max-width: 1000px) {
-  .header__background img {
-    height: 70vh;
-  }
-}
-
 @media (max-width: 767px) {
   .header__background img {
-    height: 60vh;
-    -o-object-position: right;
-       object-position: right;
-    opacity: 0.4;
+    height: 80vh;
+    -o-object-position: bottom;
+       object-position: bottom;
+    opacity: 0.35;
+    min-height: 200px;
   }
 }
 
@@ -300,8 +295,8 @@ h6 {
 .header .burger__first-line, .header .burger__second-line, .header .burger__threeth-line {
   width: 40%;
   height: 1px;
-  border: 0.5px solid #424242;
-  background-color: #424242;
+  border: 0.5px solid #64c29e;
+  background-color: #64c29e;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -312,7 +307,7 @@ h6 {
 
 .header .burger:hover .burger__first-line {
   position: relative;
-  top: 2.9px;
+  top: 4px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transition: 0.5s;
@@ -340,46 +335,48 @@ h6 {
 
 .header .burger:hover .burger__menu {
   visibility: visible;
-  left: -3px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   position: relative;
-  top: -12px;
+  top: 15px;
 }
 
 .header .burger__menu {
   visibility: hidden;
   position: relative;
-  left: -150px;
+  top: 0px;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 
 .header .burger__list {
-  background-color: #cacaca;
+  background-color: #848789;
+  border-radius: 15%;
+  text-align: center;
 }
 
 .header .burger__link {
-  font-size: 5px;
-  line-height: 5px;
+  font-size: none;
+  line-height: 14px;
   letter-spacing: 0.1em;
-  color: black;
-  font-weight: 400;
+  color: none;
+  font-weight: 700;
   padding-left: 15px;
-  padding-top: 3px;
-  padding-right: 3px;
+  padding-top: 10px;
+  padding-right: 15px;
 }
 
 .header .burger__link:last-child {
-  padding-bottom: 3px;
+  padding-bottom: 10px;
 }
 
 .header .burger__link a {
-  color: black;
+  color: #353738;
 }
 
 .header .burger__link a:hover {
-  color: darkslateblue;
+  color: #64c29e;
+  text-decoration: underline;
 }
 
 .first-frame {

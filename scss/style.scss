@@ -93,18 +93,19 @@
     top: -120px;
     left: 0;
     z-index: -1;
+
     img {
       width: 100vw;
       height: 100vh;
       object-fit: cover;
       object-position: center;
       @media (max-width: 1000px) {
-        height: 70vh;
       }
       @media (max-width: 767px) {
-        height: 60vh;
-        object-position: right;
-        opacity: 0.4;
+        height: 80vh;
+        object-position: bottom;
+        opacity: 0.35;
+        min-height: 200px;
       }
     }
   }
@@ -128,8 +129,8 @@
     &__threeth-line {
       width: 40%;
       height: 1px;
-      border: 0.5px solid rgb(66, 66, 66);
-      background-color: rgb(66, 66, 66);
+      border: 0.5px solid #64c29e;
+      background-color: #64c29e;
       transition: 0.5s;
       &:not(:last-child) {
         margin-bottom: 2px;
@@ -140,7 +141,7 @@
       // стили первой линии при наведении
       .burger__first-line {
         position: relative;
-        top: 2.9px;
+        top: 4px;
         transform: rotate(45deg);
         transition: 0.5s;
         z-index: 5;
@@ -162,36 +163,38 @@
       // событие которе показывает меню при наведении/нажатии на бургер меню
       .burger__menu {
         visibility: visible;
-        left: -3px;
         transition: 0.5s;
         position: relative;
-        top: -12px;
+        top: 15px;
       }
     }
 
     &__menu {
       visibility: hidden;
       position: relative;
-      left: -150px;
+      top: 0px;
       transition: 0.5s ease-in-out;
     }
 
     &__list {
-      background-color: rgb(202, 202, 202);
+      background-color: #848789;
+      border-radius: 15%;
+      text-align: center;
     }
 
     &__link {
-      @include font(5px, 5px, 0.1em, black, 400);
+      @include font(none, 14px, 0.1em, none, 700);
       padding-left: 15px;
-      padding-top: 3px;
-      padding-right: 3px;
+      padding-top: 10px;
+      padding-right: 15px;
       &:last-child {
-        padding-bottom: 3px;
+        padding-bottom: 10px;
       }
       a {
-        color: black;
+        color: #353738;
         &:hover {
-          color: darkslateblue;
+          color: #64c29e;
+          text-decoration: underline;
         }
       }
     }
