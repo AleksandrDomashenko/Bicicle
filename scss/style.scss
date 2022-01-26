@@ -133,29 +133,30 @@
       background-color: #64c29e;
       transition: 0.5s;
       &:not(:last-child) {
-        margin-bottom: 2px;
+        margin-bottom: 7px;
       }
     }
 
     &:hover {
       // стили первой линии при наведении
       .burger__first-line {
-        position: relative;
-        top: 4px;
         transform: rotate(45deg);
         transition: 0.5s;
         z-index: 5;
+        position: relative;
+        top: 9px;
       }
       // стили третьей линии при наведении
       .burger__second-line {
         transform: rotate(45deg);
         transition: 0.5s;
         z-index: 10;
+        position: relative;
       }
       // стили третьей линии при наведении
       .burger__threeth-line {
         position: relative;
-        top: -2.9px;
+        top: -8px;
         transform: rotate(-45deg);
         transition: 0.5s;
         z-index: 15;
@@ -165,7 +166,8 @@
         visibility: visible;
         transition: 0.5s;
         position: relative;
-        top: 15px;
+        top: 13px;
+        // left: -2px;
       }
     }
 
@@ -231,13 +233,22 @@
   &__title {
     @include font(18px, 1.2, 0.2em, #353738, 700);
     margin-bottom: 35px;
+    padding: 0 15px;
+    @media (max-width: 767px) {
+      @include font(14px, 1.2, 0.2em, none, none);
+    }
   }
 
   &__subtitle {
     @include font(18px, 34px, none, #848789, none);
     margin: 0 auto;
     max-width: 62%;
-    margin-bottom: 142px;
+    margin-bottom: 147px;
+    @media (max-width: 767px) {
+      @include font(12px, 28px, none, #848789, none);
+      max-width: 90%;
+      margin-bottom: 50px;
+    }
     @media (min-width: 2000px) {
       @include font(24px, 40px, none, none, none);
     }
