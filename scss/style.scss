@@ -141,33 +141,32 @@
       // стили первой линии при наведении
       .burger__first-line {
         transform: rotate(45deg);
-        transition: 0.5s;
-        z-index: 5;
         position: relative;
-        top: 9px;
+        top: 8.5px;
+        border: 1px solid #848789;
+        transition: 0.5s;
       }
+
       // стили третьей линии при наведении
       .burger__second-line {
-        transform: rotate(45deg);
-        transition: 0.5s;
-        z-index: 10;
-        position: relative;
+        visibility: hidden;
+        transition: 0.1ms;
       }
+
       // стили третьей линии при наведении
       .burger__threeth-line {
-        position: relative;
-        top: -8px;
         transform: rotate(-45deg);
+        position: relative;
+        top: -8.5px;
+        border: 1px solid #848789;
         transition: 0.5s;
-        z-index: 15;
       }
       // событие которе показывает меню при наведении/нажатии на бургер меню
       .burger__menu {
         visibility: visible;
-        transition: 0.5s;
+        transition: 0.5s ease-in-out;
         position: relative;
         top: 13px;
-        // left: -2px;
       }
     }
 

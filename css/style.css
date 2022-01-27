@@ -308,36 +308,33 @@ h6 {
 .header .burger:hover .burger__first-line {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  position: relative;
+  top: 8.5px;
+  border: 1px solid #848789;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  z-index: 5;
-  position: relative;
-  top: 9px;
 }
 
 .header .burger:hover .burger__second-line {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  z-index: 10;
-  position: relative;
+  visibility: hidden;
+  -webkit-transition: 0.1ms;
+  transition: 0.1ms;
 }
 
 .header .burger:hover .burger__threeth-line {
-  position: relative;
-  top: -8px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  position: relative;
+  top: -8.5px;
+  border: 1px solid #848789;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  z-index: 15;
 }
 
 .header .burger:hover .burger__menu {
   visibility: visible;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   position: relative;
   top: 13px;
 }
