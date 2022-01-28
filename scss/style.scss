@@ -21,19 +21,21 @@
 // HEADER
 .header {
   margin: 35px auto 0 auto;
-  // height: 100vh;
   &__list {
     @include flex(flex, none, space-between, center);
     max-width: 620px;
     margin: 0 auto;
     @media (min-width: 2000px) {
       max-width: 1000px;
+      margin-bottom: -41px;
     }
     @media (min-width: 2500px) {
       max-width: 1380px;
+      margin-bottom: -85px;
     }
     @media (min-width: 3000px) {
       max-width: 1760px;
+      margin-bottom: -142px;
     }
     img {
       @media (min-width: 2000px) {
@@ -93,14 +95,18 @@
     top: -120px;
     left: 0;
     z-index: -1;
+    @media (min-width: 2000px) {
+    }
+    @media (min-width: 2500px) {
+    }
+    @media (min-width: 3000px) {
+    }
 
     img {
       width: 100vw;
       height: 100vh;
-      object-fit: cover;
-      object-position: center;
-      @media (max-width: 1000px) {
-      }
+      // object-fit: cover;
+      // object-position: top;
       @media (max-width: 767px) {
         height: 80vh;
         object-position: bottom;
@@ -234,7 +240,7 @@
     margin-bottom: 35px;
     padding: 0 15px;
     @media (max-width: 767px) {
-      @include font(14px, 1.2, 0.2em, none, none);
+      @include font(14px, 1.2, 0.2em, #353738, 700);
     }
   }
 
@@ -267,21 +273,28 @@
 
   &__column {
     &:first-child {
-      min-width: 70%;
+      flex: 1 1 66.667%;
       img {
-        &:first-child {
-          width: 100%;
-          height: 100%;
+        width: 100%;
+        height: 100%;
+        @media (max-width: 1200px) {
+          object-fit: cover;
         }
       }
     }
     &:last-child {
       @include flex(flex, column, none, center);
-      min-width: 30%;
+      flex: 1 1 33.333%;
       padding-top: 70px;
+      @media (max-width: 1200px) {
+        padding-top: 35px;
+      }
       img {
         &:first-child {
           margin-bottom: 31px;
+          @media (max-width: 1200px) {
+            margin-bottom: 15px;
+          }
           padding: 0 15px;
           @media (min-width: 2000px) {
             width: 82px;
@@ -308,6 +321,10 @@
     @include font(18px, 1.2, 0.2em, #353738, 700);
     margin-bottom: 26px;
     padding: 0 15px;
+    @media (max-width: 1200px) {
+      @include font(14px, 1.2, 0.2em, #353738, 700);
+      margin-bottom: 7.8px;
+    }
   }
 
   &__subtitle {
@@ -316,6 +333,10 @@
     text-align: center;
     margin-bottom: 40px;
     padding: 0 15px;
+    @media (max-width: 1200px) {
+      @include font(14px, 20px, none, #848789, none);
+      margin-bottom: 20px;
+    }
     @media (min-width: 2000px) {
       @include font(22px, 36px, none, none, none);
       max-width: 550px;
@@ -331,6 +352,9 @@
   }
   &__line {
     margin-bottom: 54px;
+    @media (max-width: 1200px) {
+      margin-bottom: 27px;
+    }
   }
 }
 // THREETH FRAME
@@ -342,11 +366,17 @@
   &__column {
     &:first-child {
       @include flex(flex, column, none, center);
-      min-width: 30%;
+      flex: 1 1 33.333%;
       padding-top: 70px;
+      @media (max-width: 1200px) {
+        padding-top: 35px;
+      }
       img {
         &:first-child {
           margin-bottom: 29px;
+          @media (max-width: 1200px) {
+            margin-bottom: 14.5px;
+          }
           padding: 0 15px;
           @media (min-width: 2000px) {
             width: 64px;
@@ -364,15 +394,22 @@
         &:last-child {
           width: 100%;
           height: 100%;
+          @media (max-width: 1200px) {
+            width: 100%;
+            object-fit: cover;
+          }
         }
       }
     }
     &:last-child {
-      min-width: 70%;
+      flex: 1 1 66.667%;
       img {
         &:first-child {
           width: 100%;
           height: 100%;
+          @media (max-width: 1200px) {
+            object-fit: cover;
+          }
         }
       }
     }
@@ -382,6 +419,10 @@
     @include font(18px, 1.2, 0.2em, #353738, 700);
     margin-bottom: 26px;
     padding: 0 15px;
+    @media (max-width: 1200px) {
+      @include font(14px, 1.2, 0.2em, #353738, 700);
+      margin-bottom: 7.8px;
+    }
   }
 
   &__subtitle {
@@ -390,9 +431,16 @@
     text-align: center;
     margin-bottom: 40px;
     padding: 0 15px;
+    @media (max-width: 1200px) {
+      @include font(14px, 20px, none, #848789, none);
+      margin-bottom: 20px;
+    }
   }
   &__line {
     margin-bottom: 63px;
+    @media (max-width: 1200px) {
+      margin-bottom: 31.5px;
+    }
   }
 }
 // FOURTH FRAME
@@ -402,20 +450,26 @@
   }
 
   &__column {
+    flex: 1 1 33.333%;
     &:first-child {
-      min-width: 30%;
       img {
         width: 100%;
         height: 100%;
+        @media (max-width: 1200px) {
+          object-fit: cover;
+        }
       }
     }
     &:nth-child(2) {
       @include flex(flex, column, none, center);
-      min-width: 35%;
       img {
         &:first-child {
           margin-top: 58px;
           margin-bottom: 20px;
+          @media (max-width: 1200px) {
+            margin-top: 29px;
+            margin-bottom: 10px;
+          }
           @media (min-width: 2000px) {
             width: 46px;
             height: 82px;
@@ -436,10 +490,12 @@
       }
     }
     &:last-child {
-      min-width: 35%;
       img {
         width: 100%;
         height: 100%;
+        @media (max-width: 1200px) {
+          object-fit: cover;
+        }
       }
     }
   }
@@ -449,6 +505,10 @@
     margin-bottom: 26px;
     padding: 0 15px;
     text-transform: uppercase;
+    @media (max-width: 1200px) {
+      @include font(14px, 1.2, 0.2em, #353738, 700);
+      margin-bottom: 13px;
+    }
   }
   &__subtitle {
     @include font(16px, 29px, none, #848789, none);
@@ -456,10 +516,17 @@
     text-align: center;
     margin-bottom: 40px;
     padding: 0 15px;
+    @media (max-width: 1200px) {
+      @include font(14px, 20px, none, #848789, none);
+      margin-bottom: 20px;
+    }
   }
 
   &__line {
     margin-bottom: 62px;
+    @media (max-width: 1200px) {
+      margin-bottom: 31px;
+    }
   }
 }
 // FIVETH FRAME
@@ -469,6 +536,10 @@
     img {
       margin-top: 124px;
       margin-bottom: 37px;
+      @media (max-width: 1200px) {
+        margin-top: 62px;
+        margin-bottom: 18.5px;
+      }
       @media (min-width: 2000px) {
         width: 64px;
         height: 54px;
@@ -511,6 +582,10 @@
     margin-bottom: 183px;
     padding: 0 15px;
     text-align: center;
+    @media (max-width: 1200px) {
+      @include font(18px, 28px, none, #848789, none);
+      margin-bottom: 91.5px;
+    }
     @media (min-width: 2000px) {
       @include font(30px, 40px, none, #848789, none);
     }
@@ -526,16 +601,12 @@
 .sixth-frame {
   &__row {
     @include flex(flex, row, none, flex-start);
-    flex: 1 1 100%;
   }
 
   &__column {
     flex: 1 1 33.333%;
-    &:first-child {
-      flex-direction: column;
-    }
     &:nth-child(2) {
-      display: flex;
+      display: inherit;
       img {
         &:first-child {
           width: 50%;
@@ -547,9 +618,6 @@
         }
       }
     }
-    &:last-child {
-      flex-direction: column;
-    }
   }
 
   &__rowtwoitem {
@@ -557,10 +625,7 @@
     &:first-child,
     &:last-child {
       img {
-        &:first-child {
-          width: 50%;
-          height: 50%;
-        }
+        &:first-child,
         &:last-child {
           width: 50%;
           height: 50%;
@@ -604,6 +669,9 @@
       padding: 21px 57px;
       display: inline-block;
       border: 1px solid #fff;
+      @media (max-width: 767px) {
+        padding: 15px 29px;
+      }
 
       color: #fff;
       &:hover {
@@ -626,6 +694,9 @@
     @include flex(flex, column, center, center);
     img {
       margin-top: 109px;
+      @media (max-width: 767px) {
+        margin-top: 60px;
+      }
       margin-bottom: 39px;
       @media (min-width: 2000px) {
         width: 141px;
@@ -660,12 +731,22 @@
     @include flex(flex, row, center, center);
     margin-bottom: 111px;
     width: 33.375%;
+    @media (max-width: 767px) {
+      @include flex(flex, column, center, center);
+      margin-bottom: 60px;
+    }
     input {
       @include font(16px, none, 2px, none, 700);
-      width: 79%;
       min-width: 400px;
       border: 1px solid #d3d7d9;
       padding: 28px 28px 24px 28px;
+      @media (max-width: 767px) {
+        @include font(14px, none, 2px, none, 400);
+        width: 40%;
+        min-width: 300px;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
       @media (min-width: 2000px) {
         @include font(22px, none, none, none, none);
       }
@@ -690,6 +771,10 @@
       background-color: #64c29e;
       padding: 26px 45px;
       margin-left: 8px;
+      @media (max-width: 767px) {
+        margin-left: 0;
+        padding: 15px 30px;
+      }
       &:hover {
         color: #64c29e;
         background-color: #282f35;
@@ -760,18 +845,56 @@
         &:last-child {
           margin-right: 90px;
         }
+        img {
+          @media (min-width: 2000px) {
+            width: 50px;
+            height: 50px;
+          }
+          @media (min-width: 2500px) {
+            width: 80px;
+            height: 80px;
+          }
+          @media (min-width: 3000px) {
+            width: 110px;
+            height: 110px;
+          }
+        }
       }
     }
     &:last-child {
       @include flex(flex, none, none, center);
       img {
         margin-left: 9px;
+        @media (min-width: 2000px) {
+          width: 110px;
+          height: 72px;
+          margin-left: 15px;
+        }
+        @media (min-width: 2500px) {
+          width: 165px;
+          height: 108px;
+          margin-left: 21px;
+        }
+        @media (min-width: 3000px) {
+          width: 220px;
+          height: 144px;
+          margin-left: 27px;
+        }
       }
     }
   }
 
   &__name {
     @include font(16px, 17px, none, #848789, 700);
+    @media (min-width: 2000px) {
+      @include font(22px, 23px, none, none, none);
+    }
+    @media (min-width: 2500px) {
+      @include font(28px, 29px, none, none, none);
+    }
+    @media (min-width: 3000px) {
+      @include font(34px, 35px, none, none, none);
+    }
   }
 
   &__adress,
@@ -779,5 +902,14 @@
   &__craft {
     @include font(13.9px, 17px, none, #848789, none);
     font-style: italic;
+    @media (min-width: 2000px) {
+      @include font(19.9px, 23px, none, none, none);
+    }
+    @media (min-width: 2500px) {
+      @include font(25.9px, 29px, none, none, none);
+    }
+    @media (min-width: 3000px) {
+      @include font(31.9px, 35px, none, none, none);
+    }
   }
 }
