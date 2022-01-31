@@ -840,6 +840,9 @@
     padding-top: 99px;
     padding-bottom: 103px;
     @include flex(flex, none, space-between, center);
+    @media (max-width: 869px) {
+      @include flex(flex, column, none, none);
+    }
     width: 80%;
     margin: 0 auto;
   }
@@ -847,15 +850,12 @@
   &__column {
     &:nth-child(2) {
       @media (max-width: 869px) {
-        @include flex(flex, column, none, none);
+        margin-top: 40px;
+        margin-bottom: 40px;
       }
       a {
         &:not(:last-child) {
           margin-right: 15px;
-          @media (max-width: 869px) {
-            margin-right: 0;
-            margin-bottom: 10px;
-          }
         }
         &:last-child {
           margin-right: 90px;
@@ -908,7 +908,10 @@
 
   &__name {
     @include font(16px, 17px, none, #848789, 700);
-    padding: 0 0 0 15px;
+    padding: 0 15px;
+    @media (max-width: 869px) {
+      text-align: center;
+    }
     @media (min-width: 2000px) {
       @include font(22px, 23px, none, none, none);
     }
@@ -923,6 +926,9 @@
   &__adress,
   &__county,
   &__craft {
+    @media (max-width: 869px) {
+      text-align: center;
+    }
     @include font(13.9px, 17px, none, #848789, none);
     font-style: italic;
     padding: 0 15px;
