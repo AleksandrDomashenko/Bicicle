@@ -312,6 +312,7 @@ h6 {
   position: relative;
   top: 8.5px;
   border: 1px solid #848789;
+  background-color: #848789;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -328,6 +329,7 @@ h6 {
   position: relative;
   top: -8.5px;
   border: 1px solid #848789;
+  background-color: #848789;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
