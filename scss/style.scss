@@ -899,13 +899,16 @@
           height: 144px;
           margin-left: 27px;
         }
+        @media (max-width: 869px) {
+          margin-right: 15px;
+        }
       }
     }
   }
 
   &__name {
     @include font(16px, 17px, none, #848789, 700);
-    padding: 0 15px;
+    padding: 0 0 0 15px;
     @media (min-width: 2000px) {
       @include font(22px, 23px, none, none, none);
     }

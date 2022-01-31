@@ -1801,13 +1801,19 @@ h6 {
   }
 }
 
+@media (max-width: 869px) {
+  .footer__column:last-child img {
+    margin-right: 15px;
+  }
+}
+
 .footer__name {
   font-size: 16px;
   line-height: 17px;
   letter-spacing: none;
   color: #848789;
   font-weight: 700;
-  padding: 0 15px;
+  padding: 0 0 0 15px;
 }
 
 @media (min-width: 2000px) {
